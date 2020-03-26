@@ -45,6 +45,7 @@
     }
    
 var zombie_map;
+  var old_position;
 var all_markers = [];
 var data = `38.028218256430875 -78.46983354492188 zombie_man.png
             38.01631802299365 -78.49867265625001 zombie_woman.png
@@ -60,6 +61,7 @@ zombie_map = new google.maps.Map(document.getElementById('zombie_map'),{
                      center: {lat: 38.029300, lng: -78.476700}
   });
  
+  var old_position = new google.maps.LatLng(38.029300, -79.476700);
  
 if(navigator.geolocation) {
 navigator.geolocation.watchPosition(set_my_position);
@@ -108,6 +110,7 @@ var pos = new google.maps.LatLng(position.coords.latitude,position.coords.longit
                              map: zombie_map,
                              icon: "unicorn.png"
 });
+  old_position = marker;
 }
 
 </script>
