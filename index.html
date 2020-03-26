@@ -45,6 +45,7 @@
     }
    
 var zombie_map;
+  var tolerance
   var old_position;
 var all_markers = [];
 var data = `38.028218256430875 -78.46983354492188 zombie_man.png
@@ -104,14 +105,27 @@ place_marker(location);
 });
 }
 function set_my_position(position){
-var pos = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+
+  old_position.setmap(null);
+  var pos = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
     var pos_marker = new google.maps.Marker({
                              position: pos,
                              map: zombie_map,
                              icon: "unicorn.png"
 });
   old_position = marker;
+  for(var i=0; i < all_markers.length; i++){
+   var distance = google.maps.geometry.spherical.computeDistanceBetween(pos, all_marker[i].getPosition());
+		if(distance < tolerance ){
+   alert(var what_is_it = all_markers[i].getIcon();
+   what_is_it = what_is_it.replace(".png", "");
+   alert("You found the " + what_is_it );
+   all_markers[i].setmap(null);
+   }}
+  
+  
 }
+  
 
 </script>
 
