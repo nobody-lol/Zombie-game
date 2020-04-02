@@ -45,7 +45,7 @@
     }
    
 var zombie_map;
-  var tolerance
+  var tolerance = 10;
   var old_position;
 var all_markers = [];
 var data = `38.028218256430875 -78.46983354492188 zombie_man.png
@@ -117,7 +117,7 @@ function set_my_position(position){
   for(var i=0; i < all_markers.length; i++){
    var distance = google.maps.geometry.spherical.computeDistanceBetween(pos, all_marker[i].getPosition());
 		if(distance < tolerance ){
-   alert(var what_is_it = all_markers[i].getIcon();
+   var what_is_it = all_markers[i].getIcon();
    what_is_it = what_is_it.replace(".png", "");
    alert("You found the " + what_is_it );
    all_markers[i].setmap(null);
@@ -125,6 +125,9 @@ function set_my_position(position){
   
   
 }
+  
+
+
   
 
 </script>
