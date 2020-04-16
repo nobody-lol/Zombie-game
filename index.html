@@ -28,7 +28,7 @@
 </form>
 
 <script>
-  function place_marker(location){
+   function place_marker(location){
  
   var emoji = document.getElementById('icon_to_use').value;
    
@@ -138,8 +138,9 @@ alert("Geolocation doesn't work in your browser");
 var location = e.latLng;
 place_marker(location);
 });
-
+}
 function set_my_position(position){
+
 
   old_position.setmap(null);
   var pos = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
@@ -160,6 +161,12 @@ function set_my_position(position){
   
   
 }
+  
+
+
+  
+
+
   
 
 
